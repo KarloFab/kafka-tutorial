@@ -10,7 +10,7 @@ public class Consumer {
 
     private final Logger logger = LoggerFactory.getLogger(Producer.class);
 
-    @KafkaListener(topics = "users", groupId = "group_id")
+    @KafkaListener(topics = "users", groupId = "users_group")
     public void consume(String message) {
         logger.info(String.format("Consumed message -> %s", message));
     }
